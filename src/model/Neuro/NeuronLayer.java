@@ -1,6 +1,5 @@
-package model;
+package model.Neuro;
 
-import java.util.DoubleSummaryStatistics;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;

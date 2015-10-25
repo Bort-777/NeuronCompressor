@@ -1,10 +1,8 @@
 package controller;
 
-import model.Neuron;
-import model.NeuronLayer;
-import model.NeuronNet;
+import model.Neuro.NeuronLayer;
+import model.Neuro.NeuronNet;
 
-import java.util.DoubleSummaryStatistics;
 import java.util.LinkedList;
 import java.util.List;
 
