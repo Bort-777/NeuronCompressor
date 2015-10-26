@@ -1,4 +1,4 @@
-package model.Neuro;
+package model.NeuronPackage;
 
 import java.util.LinkedList;
 import java.util.Iterator;
@@ -11,7 +11,7 @@ public class Neuron {
     private double value;                   // value on this neuron
     private LinkedList<Akson> aksons;       // all aksons, collides to neuron
 
-    public Neuron(){
+    public Neuron() {
         aksons = new LinkedList<Akson>();
     }
 
@@ -43,5 +43,18 @@ public class Neuron {
 
     public void addAkson(Akson akson) {     // add Akson
         aksons.add(akson);
+    }
+
+    public LinkedList<Akson> getInputAksonsList() {
+        return aksons;
+    }
+
+    public void setWeightCoofs(LinkedList<Double> coof){
+        Iterator<Akson> aksonIterator = aksons.iterator();
+        int number = -1;
+        while(aksonIterator.hasNext()){
+            number++;
+            aksonIterator.next().setWeightCoof(coof.get(number));
+        }
     }
 }

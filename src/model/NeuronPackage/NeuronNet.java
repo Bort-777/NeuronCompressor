@@ -1,4 +1,4 @@
-package model.Neuro;
+package model.NeuronPackage;
 
 import java.util.List;
 
@@ -32,4 +32,7 @@ public class NeuronNet {
         return outputLayer.getValues();
     }
 
+    public NeuronLayer getOutputLayer(){
+        return outputLayer;
+    }
 }

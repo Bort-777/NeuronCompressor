@@ -1,4 +1,4 @@
-package model.Neuro;
+package model.NeuronPackage;
 
 import java.util.Iterator;
 import java.util.LinkedList;

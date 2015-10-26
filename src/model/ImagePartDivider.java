@@ -8,14 +8,14 @@ import java.util.LinkedList;
 /**
  * Created by Asus on 25.10.2015.
  */
-class ImageHandler {
+public class ImagePartDivider {
 
-    private Image image;
+    private BufferedImage image;
     private int height;
     private int width;
 
-    public ImageHandler(Image image) {
-        this.image = image;
+    public ImagePartDivider(Image image) {
+        this.image = (BufferedImage) image;
     }
 
     public void setHeight(int height) {
@@ -27,6 +27,13 @@ class ImageHandler {
     }
 
     public LinkedList<Double> getPartVector(int coordX, int coordY) {
+        if (coordX + width > image.getWidth()) {
+            coordX -= coordX + width - image.getWidth();
+        }
+        if (coordY + height > image.getHeight()) {
+            coordY -= coordY + height - image.getHeight();
+        }
+
         LinkedList<Double> vector = new LinkedList<>();
 
         BufferedImage bufferedImage = (BufferedImage) image;

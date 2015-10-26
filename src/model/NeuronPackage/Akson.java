@@ -1,4 +1,4 @@
-package model.Neuro;
+package model.NeuronPackage;
 
 /**
  * Created by Maxim Danilov on 25.10.2015.
